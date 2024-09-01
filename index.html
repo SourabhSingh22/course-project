@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="my-course">
+            <h1 class="title">Free Course</h1>
+        </div>
+        <div class="complete-page">
+            <div class="progress">
+                <span class="p-text"> Your Progress <strong id="count-data">0/10</strong></span>
+                <span id="increasing-p" class="increasing">0% complete</span>
+
+                <div class="progress-line">
+                    <div class="line">
+                        <p id="increasing-line"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="all-tasks">
+
+                <button id="task-btn-one" class="task-btn">
+                    <div class="task">
+                        <div class="task-text">
+                            <p id="t-text">Day 1:Arrays</p>
+                        </div>
+                        <div class="count">
+                            <span id="counter">0 /3</span>
+                            <div id="arrow" class="arrow">
+                                <img id="down-arrow" src="icon/down-arrow.png" alt="down-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <div id="down-area" class="down-area">
+                    <div class="area-items">
+                        <table class="myTable">
+                            <tr class="table-row">
+                                <th class="T-text1">
+                                    <p>Status</p>
+                                </th>
+                                <th class="T-text2">
+                                    <p>Problem</p>
+                                </th>
+
+                                <th>
+                                    <p>Article</p>
+                                </th>
+                                <th>
+                                    <p>Youtube</p>
+                                </th>
+                                <th>
+                                    <p>Practice</p>
+                                </th>
+                                <th>
+                                    <p>Note</p>
+                                </th>
+                                <th>
+                                    <p>Difficulty</p>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-one" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-one" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-one" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                </th>
+                        </table>
+                    </div>
+                </div>
+
+                <button id="task-btn-two" class="task-btn">
+                    <div class="task">
+                        <div class="task-text">
+                            <p id="t-text">Day 2 : Arrays part II</p>
+                        </div>
+                        <div class="count">
+                            <span id="counter-two">0 /3</span>
+                            <div id="arrow" class="arrow">
+                                <img id="down-arrow-two" src="icon/down-arrow.png" alt="down-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <div id="down-area-two" class="down-area">
+                    <div class="area-items">
+                        <table class="myTable">
+                            <tr class="table-row">
+                                <th class="T-text1">
+                                    <p>Status</p>
+                                </th>
+                                <th class="T-text2">
+                                    <p>Problem</p>
+                                </th>
+
+                                <th>
+                                    <p>Article</p>
+                                </th>
+                                <th>
+                                    <p>Youtube</p>
+                                </th>
+                                <th>
+                                    <p>Practice</p>
+                                </th>
+                                <th>
+                                    <p>Note</p>
+                                </th>
+                                <th>
+                                    <p>Difficulty</p>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-two" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-two" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-two" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                </th>
+                        </table>
+                    </div>
+                </div>
+
+                <button id="task-btn-three" class="task-btn">
+                    <div class="task">
+                        <div class="task-text">
+                            <p id="t-text">Day 3 : Arrays part III</p>
+                        </div>
+                        <div class="count">
+                            <span id="counter-three">0 /3</span>
+                            <div id="arrow" class="arrow">
+                                <img id="down-arrow-three" src="icon/down-arrow.png" alt="down-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <div id="down-area-three" class="down-area">
+                    <div class="area-items">
+                        <table class="myTable">
+                            <tr class="table-row">
+                                <th class="T-text1">
+                                    <p>Status</p>
+                                </th>
+                                <th class="T-text2">
+                                    <p>Problem</p>
+                                </th>
+
+                                <th>
+                                    <p>Article</p>
+                                </th>
+                                <th>
+                                    <p>Youtube</p>
+                                </th>
+                                <th>
+                                    <p>Practice</p>
+                                </th>
+                                <th>
+                                    <p>Note</p>
+                                </th>
+                                <th>
+                                    <p>Difficulty</p>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-three" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-three" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-three" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                </th>
+                        </table>
+                    </div>
+                </div>
+
+                <button id="task-btn-fourth" class="task-btn">
+                    <div class="task">
+                        <div class="task-text">
+                            <p id="t-text">Day 4 : Arrays part IV</p>
+                        </div>
+                        <div class="count">
+                            <span id="counter-fourth">0 /3</span>
+                            <div id="arrow" class="arrow">
+                                <img id="down-arrow-fourth" src="icon/down-arrow.png" alt="down-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <div id="down-area-fourth" class="down-area">
+                    <div class="area-items">
+                        <table class="myTable">
+                            <tr class="table-row">
+                                <th class="T-text1">
+                                    <p>Status</p>
+                                </th>
+                                <th class="T-text2">
+                                    <p>Problem</p>
+                                </th>
+
+                                <th>
+                                    <p>Article</p>
+                                </th>
+                                <th>
+                                    <p>Youtube</p>
+                                </th>
+                                <th>
+                                    <p>Practice</p>
+                                </th>
+                                <th>
+                                    <p>Note</p>
+                                </th>
+                                <th>
+                                    <p>Difficulty</p>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-fourth" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                <!-- </th>
+                                <th class="input">
+                                    <input id="checkBox-fourth" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="input">
+                                    <input id="checkBox-fourth" type="checkbox">
+                                <th class="c-text">
+                                    <p>Set matrix zero</p>
+                                </th>
+                                <th id="article">
+                                    <a class="link" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="article">
+                                            <path
+                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
+                                            </path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </a>
+                                </th>
+                                <th class="ytb-link">
+                                    <a href="#">
+                                        <img src="icon/youtube.png" width="35px">
+
+                                    </a>
+                                </th>
+                                <th class="conding-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="note-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                <th class="difficulty-link">
+                                    <a href="#">
+
+                                    </a>
+                                </th>
+                                </th>
+                        </table>
+                    </div>
+                </div>
+                </th> -->
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
