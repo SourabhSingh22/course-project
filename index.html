@@ -4,695 +4,669 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My site</title>
+    <title>My Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="my-course">
-            <h1 class="title">Free Course</h1>
-        </div>
-        <div class="complete-page">
-            <div class="progress">
-                <span class="p-text"> Your Progress <strong id="count-data">0/10</strong></span>
-                <span id="increasing-p" class="increasing">0% complete</span>
-
+    <div class="container" id="all-container-data">
+        <div class="all-page" id="all-page-data">
+            <div class="progress-area">
+                <div class="progress-count">
+                    <span  class="count-number">Your Progress: <strong id="count-number" style="color: black;">0/10</strong></span>
+                    <span id="count-percentage" class="count-percentage">0% complete</span>
+                </div>
                 <div class="progress-line">
-                    <div class="line">
-                        <p id="increasing-line"></p>
+                    <div class="sub-line">
+                        <div class="p-flow" id="increasing-line"></div>
                     </div>
                 </div>
             </div>
-            <div class="all-tasks">
 
-                <button id="task-btn-one" class="task-btn">
-                    <div class="task">
-                        <div class="task-text">
-                            <p id="t-text">Day 1:Arrays</p>
-                        </div>
-                        <div class="count">
-                            <span id="counter">0 /3</span>
-                            <div id="arrow" class="arrow">
-                                <img id="down-arrow" src="icon/down-arrow.png" alt="down-arrow">
-                            </div>
-                        </div>
+            <!--  -->
+            <div class="first-section">
+                <button class="first-button">
+                    <div class="text-right" id="one-day-text">Day 1: Arrays</div>
+
+                    <div class="left-side">
+                        <div class="counter" id="counter-one">0 /3</div>
+                                    
+                            <svg id="arrow-one" class="arrow w-8 h-8 flex-shrink-0  ml-3  rounded-lg text-sm border  fill-current text-gray-400 group-hover:text-gray-500 dark:bg-dark_40 border-zinc-300 dark:border-zinc-800 bg-[#fafafa]"
+                                viewBox="0 0 32 32">
+                                <path d="M16 20l-5.4-5.4 1.4-1.4 4 4 4-4 1.4 1.4z"></path>
+                            </svg>
+
                     </div>
                 </button>
 
-                <div id="down-area" class="down-area">
-                    <div class="area-items">
-                        <table class="myTable">
-                            <tr class="table-row">
-                                <th class="T-text1">
-                                    <p>Status</p>
-                                </th>
-                                <th class="T-text2">
-                                    <p>Problem</p>
-                                </th>
-
-                                <th>
-                                    <p>Article</p>
-                                </th>
-                                <th>
-                                    <p>Youtube</p>
-                                </th>
-                                <th>
-                                    <p>Practice</p>
-                                </th>
-                                <th>
-                                    <p>Note</p>
-                                </th>
-                                <th>
-                                    <p>Difficulty</p>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-one" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-one" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-one" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                </th>
-                        </table>
+                <!--  -->
+                <div id="down-area-one" class="down-area" style="display: none;">
+                    <div class="items-section">
+                        <div class="items">
+                            <table class="data-table">
+                                <thead class="text-area">
+                                    <tr>
+                                        <th class=" status text first-text boder-r-2 whitespace-nowrapr">
+                                            <p>Status</p>
+                                        </th>
+                                        <th class="text second-text boder-r-2 whitespace-nowrap">
+                                            <p>Problem</p>
+                                        </th>
+                                        <th class="text thrid-text boder-r-2 whitespace-nowrap">
+                                            <p>Article</p>
+                                        </th>
+                                        <th class="text fourth-text boder-r-2 whitespace-nowrap">
+                                            <p>Youtube</p>
+                                        </th>
+                                        <th class="text fifth-text boder-r-2 whitespace-nowrap">
+                                            <p>Practice</p>
+                                        </th>
+                                        <th class="text sixth-text boder-r-2 whitespace-nowrap">
+                                            <p>Notes</p>
+                                        </th>
+                                        <th class="text sevanth-text boder-r-2 whitespace-nowrap">
+                                            <p>Difficulty</p>
+                                        </th>
+                                        <th class="revision text eighth-text boder-r-2 whitespace-nowrap">
+                                            <p>Revision</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-13px" id="first-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center" >
+                                            <input id="input-box-one" itemid="input-check" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="text-13px" id="first-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-one" itemid="input-check" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="text-13px" id="first-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area first whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-one" itemid="input-check" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area last whitespace-nowrap flex justify-center items-center">
+                                            <div class="font ">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-
-                <button id="task-btn-two" class="task-btn">
-                    <div class="task">
-                        <div class="task-text">
-                            <p id="t-text">Day 2 : Arrays part II</p>
-                        </div>
-                        <div class="count">
-                            <span id="counter-two">0 /3</span>
-                            <div id="arrow" class="arrow">
-                                <img id="down-arrow-two" src="icon/down-arrow.png" alt="down-arrow">
-                            </div>
-                        </div>
-                    </div>
-                </button>
-
-                <div id="down-area-two" class="down-area">
-                    <div class="area-items">
-                        <table class="myTable">
-                            <tr class="table-row">
-                                <th class="T-text1">
-                                    <p>Status</p>
-                                </th>
-                                <th class="T-text2">
-                                    <p>Problem</p>
-                                </th>
-
-                                <th>
-                                    <p>Article</p>
-                                </th>
-                                <th>
-                                    <p>Youtube</p>
-                                </th>
-                                <th>
-                                    <p>Practice</p>
-                                </th>
-                                <th>
-                                    <p>Note</p>
-                                </th>
-                                <th>
-                                    <p>Difficulty</p>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-two" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-two" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-two" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                </th>
-                        </table>
-                    </div>
-                </div>
-
-                <button id="task-btn-three" class="task-btn">
-                    <div class="task">
-                        <div class="task-text">
-                            <p id="t-text">Day 3 : Arrays part III</p>
-                        </div>
-                        <div class="count">
-                            <span id="counter-three">0 /3</span>
-                            <div id="arrow" class="arrow">
-                                <img id="down-arrow-three" src="icon/down-arrow.png" alt="down-arrow">
-                            </div>
-                        </div>
-                    </div>
-                </button>
-
-                <div id="down-area-three" class="down-area">
-                    <div class="area-items">
-                        <table class="myTable">
-                            <tr class="table-row">
-                                <th class="T-text1">
-                                    <p>Status</p>
-                                </th>
-                                <th class="T-text2">
-                                    <p>Problem</p>
-                                </th>
-
-                                <th>
-                                    <p>Article</p>
-                                </th>
-                                <th>
-                                    <p>Youtube</p>
-                                </th>
-                                <th>
-                                    <p>Practice</p>
-                                </th>
-                                <th>
-                                    <p>Note</p>
-                                </th>
-                                <th>
-                                    <p>Difficulty</p>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-three" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-three" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-three" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                </th>
-                        </table>
-                    </div>
-                </div>
-
-                <button id="task-btn-fourth" class="task-btn">
-                    <div class="task">
-                        <div class="task-text">
-                            <p id="t-text">Day 4 : Arrays part IV</p>
-                        </div>
-                        <div class="count">
-                            <span id="counter-fourth">0 /3</span>
-                            <div id="arrow" class="arrow">
-                                <img id="down-arrow-fourth" src="icon/down-arrow.png" alt="down-arrow">
-                            </div>
-                        </div>
-                    </div>
-                </button>
-
-                <div id="down-area-fourth" class="down-area">
-                    <div class="area-items">
-                        <table class="myTable">
-                            <tr class="table-row">
-                                <th class="T-text1">
-                                    <p>Status</p>
-                                </th>
-                                <th class="T-text2">
-                                    <p>Problem</p>
-                                </th>
-
-                                <th>
-                                    <p>Article</p>
-                                </th>
-                                <th>
-                                    <p>Youtube</p>
-                                </th>
-                                <th>
-                                    <p>Practice</p>
-                                </th>
-                                <th>
-                                    <p>Note</p>
-                                </th>
-                                <th>
-                                    <p>Difficulty</p>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-fourth" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                <!-- </th>
-                                <th class="input">
-                                    <input id="checkBox-fourth" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="input">
-                                    <input id="checkBox-fourth" type="checkbox">
-                                <th class="c-text">
-                                    <p>Set matrix zero</p>
-                                </th>
-                                <th id="article">
-                                    <a class="link" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" class="article">
-                                            <path
-                                                d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2">
-                                            </path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </a>
-                                </th>
-                                <th class="ytb-link">
-                                    <a href="#">
-                                        <img src="icon/youtube.png" width="35px">
-
-                                    </a>
-                                </th>
-                                <th class="conding-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="note-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                <th class="difficulty-link">
-                                    <a href="#">
-
-                                    </a>
-                                </th>
-                                </th>
-                        </table>
-                    </div>
-                </div>
-                </th> -->
-                </table>
             </div>
+
+            <!--  -->
+            <div class="first-section second" >
+                <button class="first-button second">
+                    <div class="text-right" id="two-day-text">Day 2: Arrays Part II</div>
+
+                    <div class="left-side">
+                        <div class="counter" id="counter-two">0 /3</div>
+
+                        <svg id="arrow-two" class=" arrow w-8 h-8 flex-shrink-0  ml-3  rounded-lg text-sm border  fill-current text-gray-400 group-hover:text-gray-500 dark:bg-dark_40 border-zinc-300 dark:border-zinc-800 bg-[#fafafa]"
+                            viewBox="0 0 32 32">
+                            <path d="M16 20l-5.4-5.4 1.4-1.4 4 4 4-4 1.4 1.4z"></path>
+                        </svg>
+                    </div>
+                </button>
+
+                <!--  -->
+                <div class="down-area" id="down-area-two" style="display: none;">
+                    <div class="items-section">
+                        <div class="items">
+                            <table class="data-table">
+                                <thead class="text-area">
+                                    <tr>
+                                        <th class=" status text first-text boder-r-2 whitespace-nowrapr">
+                                            <p>Status</p>
+                                        </th>
+                                        <th class="text second-text boder-r-2 whitespace-nowrap">
+                                            <p>Problem</p>
+                                        </th>
+                                        <th class="text thrid-text boder-r-2 whitespace-nowrap">
+                                            <p>Article</p>
+                                        </th>
+                                        <th class="text fourth-text boder-r-2 whitespace-nowrap">
+                                            <p>Youtube</p>
+                                        </th>
+                                        <th class="text fifth-text boder-r-2 whitespace-nowrap">
+                                            <p>Practice</p>
+                                        </th>
+                                        <th class="text sixth-text boder-r-2 whitespace-nowrap">
+                                            <p>Notes</p>
+                                        </th>
+                                        <th class="text sevanth-text boder-r-2 whitespace-nowrap">
+                                            <p>Difficulty</p>
+                                        </th>
+                                        <th class="revision text eighth-text boder-r-2 whitespace-nowrap">
+                                            <p>Revision</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-13px" id="second-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-two" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="text-13px" id="second-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-two" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="text-13px" id="second-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area first whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-two" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area last whitespace-nowrap flex justify-center items-center">
+                                            <div class="font ">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="first-section">
+                <button class="first-button">
+                    <div class="text-right" id="three-day-text">Day 3: Arrays Part III</div>
+
+                    <div class="left-side">
+                        <div class="counter" id="counter-three">0 /3</div>
+
+                        <svg id="arrow-three" class=" arrow w-8 h-8 flex-shrink-0  ml-3  rounded-lg text-sm border  fill-current text-gray-400 group-hover:text-gray-500 dark:bg-dark_40 border-zinc-300 dark:border-zinc-800 bg-[#fafafa]"
+                            viewBox="0 0 32 32">
+                            <path d="M16 20l-5.4-5.4 1.4-1.4 4 4 4-4 1.4 1.4z"></path>
+                        </svg>
+                    </div>
+                </button>
+
+                <!--  -->
+                <div class="down-area" id="down-area-three" style="display: none;">
+                    <div class="items-section">
+                        <div class="items">
+                            <table class="data-table">
+                                <thead class="text-area">
+                                    <tr>
+                                        <th class=" status text first-text boder-r-2 whitespace-nowrapr">
+                                            <p>Status</p>
+                                        </th>
+                                        <th class="text second-text boder-r-2 whitespace-nowrap">
+                                            <p>Problem</p>
+                                        </th>
+                                        <th class="text thrid-text boder-r-2 whitespace-nowrap">
+                                            <p>Article</p>
+                                        </th>
+                                        <th class="text fourth-text boder-r-2 whitespace-nowrap">
+                                            <p>Youtube</p>
+                                        </th>
+                                        <th class="text fifth-text boder-r-2 whitespace-nowrap">
+                                            <p>Practice</p>
+                                        </th>
+                                        <th class="text sixth-text boder-r-2 whitespace-nowrap">
+                                            <p>Notes</p>
+                                        </th>
+                                        <th class="text sevanth-text boder-r-2 whitespace-nowrap">
+                                            <p>Difficulty</p>
+                                        </th>
+                                        <th class="revision text eighth-text boder-r-2 whitespace-nowrap">
+                                            <p>Revision</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-13px" id="third-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-three" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="text-13px" id="third-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-three" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="text-13px" id="third-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area first whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-three" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area last whitespace-nowrap flex justify-center items-center">
+                                            <div class="font ">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
+            <div class="first-section">
+                <button class="first-button">
+                    <div class="text-right" id="four-day-text">Day 4: Arrays Part IV</div>
+
+                    <div class="left-side">
+                        <div class="counter" id="counter-fourth">0 /1</div>
+
+                        <svg id="arrow-four" class=" arrow w-8 h-8 flex-shrink-0  ml-3  rounded-lg text-sm border  fill-current text-gray-400 group-hover:text-gray-500 dark:bg-dark_40 border-zinc-300 dark:border-zinc-800 bg-[#fafafa]"
+                            viewBox="0 0 32 32">
+                            <path d="M16 20l-5.4-5.4 1.4-1.4 4 4 4-4 1.4 1.4z"></path>
+                        </svg>
+                    </div>
+                </button>
+
+                <!--  -->
+                <div class="down-area" id="down-area-four" style="display: none;">
+                    <div class="items-section">
+                        <div class="items">
+                            <table class="data-table">
+                                <thead class="text-area">
+                                    <tr>
+                                        <th class=" status text first-text boder-r-2 whitespace-nowrapr">
+                                            <p>Status</p>
+                                        </th>
+                                        <th class="text second-text boder-r-2 whitespace-nowrap">
+                                            <p>Problem</p>
+                                        </th>
+                                        <th class="text thrid-text boder-r-2 whitespace-nowrap">
+                                            <p>Article</p>
+                                        </th>
+                                        <th class="text fourth-text boder-r-2 whitespace-nowrap">
+                                            <p>Youtube</p>
+                                        </th>
+                                        <th class="text fifth-text boder-r-2 whitespace-nowrap">
+                                            <p>Practice</p>
+                                        </th>
+                                        <th class="text sixth-text boder-r-2 whitespace-nowrap">
+                                            <p>Notes</p>
+                                        </th>
+                                        <th class="text sevanth-text boder-r-2 whitespace-nowrap">
+                                            <p>Difficulty</p>
+                                        </th>
+                                        <th class="revision text eighth-text boder-r-2 whitespace-nowrap">
+                                            <p>Revision</p>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-13px" id="fourth-input-section">
+                                    <tr class="tr">
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <input id="input-box-fourth" name="complete" type="checkbox" class="form-checkbox">
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                        <td class="input-area whitespace-nowrap flex justify-center items-center">
+                                            <div class="font">
+                                                <a href="#"></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <!--  -->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
-    </div>
-    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
