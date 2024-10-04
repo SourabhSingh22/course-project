@@ -40,6 +40,7 @@ function updateCounts() {
 checkBoxes.forEach(checkbox => {
     checkbox.addEventListener('change', updateCounts);
 });
+// 
 
 // Down-area-one
 const downAreaOne = document.getElementById("down-area-one");
@@ -109,4 +110,3 @@ arrowFour.addEventListener('click', function() {
     }
 
 });
-

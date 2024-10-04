@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thundering Herd Problem in System Design Explained in Depth Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin:20px ;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        code {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 2px 4px;
+        }
+        .heading{
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to left, rgb(58, 55, 55), rgb(121, 97, 206));
+            border-radius: 3px;
+        }
+        .heading h1{
+            color: white;
+            /* font-size: 40px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Notes</h1>
+    </div>
+
+    <h1>Coldplay Ticket Sales - System Design Concepts</h1>
+    <p>On September 23, 2024, thousands of Coldplay fans across India were eagerly waiting to grab their tickets on BookMyShow. As the clock struck 12 PM, everyone clicked "Buy Now" at the same moment, and then the website crashed. Why did this happen? What went wrong with BookMyShow's system? In this video, we are not only going to learn about some important system design concepts but also discuss possible solutions so that if you ever find yourself in a similar situation, you will know what to do. So, let's dive in and find out.</p>
+    
+    <h2>The Thundering Herd Problem</h2>
+    <p>Imagine a large crowd rushing through a single door when an event like a ticket sale starts. Everyone tries to access the system at the same time. This sudden rush of people can overload the servers, causing the service to slow down or even crash. This problem is called the "Thundering Herd" problem. Think of a mall having a big sale. When the doors open, a huge crowd of shoppers rushes in all at once. This can create bottlenecks at the entrance and inside the mall, making it hard for anyone to move around or get to the stores they want. Just like servers that can't handle too many users at once.</p>
+
+    <h2>System Components in Handling Ticket Sales</h2>
+    <p>To understand how we can mitigate this issue, let's break down the system components involved in handling ticket sales. In most ticketing systems, there is a component called a <strong>load balancer</strong>. Think of this as a traffic cop that directs incoming requests to multiple servers. This ensures that no single server gets overwhelmed by too many requests at once.</p>
+    <p>Now, let's say we have three servers. Each of these servers has its own <strong>thread pool</strong>, which is a group of worker threads ready to handle incoming requests. You can imagine this thread pool as a team of workers prepared to tackle requests as they come in.</p>
+    <p>Alongside the thread pools, each server also has a <strong>request queue</strong>. This queue is where incoming requests wait their turn to be processed, much like a line at a movie ticket counter.</p>
+    
+    <h2>How It Works Together</h2>
+    <p>When people try to buy tickets, the load balancer receives all the requests first. It then distributes the requests across the three servers, sending some to each one. Once the requests reach a server, they go into the request queue. If all the threads in the thread pool are busy, as threads become available, they pull requests from the queue to process them.</p>
+    <p>However, if the number of requests coming in is greater than what the thread pools and queues can handle, the system will start to experience problems. This can lead to slow response times or even failures as the servers can't keep up with the demand.</p>
+    <p>Let's say each server has a thread pool size of 100 and a request queue length of 1000. Once the queue is full, any new requests are rejected because the system can no longer accept more traffic. At this point, users get frustrated and retry, creating a self-reinforcing loop. This creates a stream of requests that just keeps going.</p>
+    
+    <h2>Understanding the Math</h2>
+    <p>Here is a breakdown of why this is problematic. Imagine each user retries after failure every 500 milliseconds, that is 0.5 seconds. If 1000 users are retrying every 0.5 seconds, that's an additional 2000 requests per second on top of the original 1000. This means the system now has to handle 3000 requests per second. Clearly, the system is now dealing with 100 times more requests than it can handle, causing total system collapse.</p>
+    
+    <h2>Exponential Backoff</h2>
+    <p>One way to solve the issue of overwhelming servers during high demand is by using <strong>exponential backoff</strong>. Instead of retrying immediately after a failure, users wait increasingly longer times before attempting to retry. Here's how this works: In exponential backoff, the wait time between retry attempts increases after each failure. The idea is to allow the system more time to recover from the issue before retrying.</p>
+    <p>Here's how the math works: Let's define <code>t_0</code> as the initial wait time after the first failure. This is the time the system will wait before the first retry. After each subsequent failure, the wait time doubles. The formula to calculate the wait time for the nth retry is this:</p>
+    <p><code>t_n = t_0 * 2^n</code></p>
+    <p>where <code>n</code> is the number of failed attempts, and <code>t_0</code> is the wait time before the nth retry.</p>
+    <p>For example, if the initial wait time <code>t_0</code> is 200 milliseconds, after three retries, it will be:</p>
+    <p><code>t_3 = 200 * 2^3 = 200 * 8 = 1600 milliseconds</code></p>
+    <p>This approach gives the system more time to recover between retries, reducing the chances of repeated failures due to overwhelming load. However, even with exponential backoff, if many users try to retrying at the same time, it can still cause a surge of requests.</p>
+    
+    <h2>Introducing Jitter</h2>
+    <p>To prevent this, we introduce <strong>jitter</strong>, a random variation in the wait time. Adding jitter ensures that retries don't happen at the exact same time, spreading out the requests and further reducing the load on the servers. The formula for calculating the wait time with jitter is this:</p>
+    <p><code>Random wait time = Random(0, t_n)</code></p>
+    <p>where <code>t_n</code> is the calculated exponential backoff time.</p>
+    <p>Let's say the initial wait time <code>t_0</code> is 200 milliseconds, the maximum wait time is 4000 milliseconds, and after three retries, the exponential backoff wait time will be 1600 milliseconds. Suppose the random wait time generated is between 0 and 1600 milliseconds. Let's say the random function generates 900 milliseconds. Now we apply the jitter formula and we get 900 milliseconds. In this case, the final wait time before the next retry is 900 milliseconds instead of 1600 milliseconds.</p>
+    <p>This randomness helps distribute retry attempts more smoothly. By applying this strategy, we not only prevent system crashes but also give users a smoother, more predictable experience, so everyone has a fair shot at getting those Coldplay tickets.</p>
+</body>
+</html>
